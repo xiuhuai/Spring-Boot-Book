@@ -7,7 +7,8 @@
 
 淘宝: https://detail.tmall.com/item.htm?spm=a230r.1.14.71.3f09173dsFcdvL&id=609074835276&ns=1&abbucket=18
 
-京东：https://item.jd.com/62624049070.html
+京东：https://item.jd.com/12760076.html
+      https://item.jd.com/62624049070.html
 
 # 注意
 
