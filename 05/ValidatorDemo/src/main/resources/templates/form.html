@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<style type="text/css">
+   .warn{color:red}
+</style>
+<form th:action="@{/test}" th:object="${user}" method="post">
+    <div>
+        <div>
+            <span>姓名:</span>
+            <span><input type="text" th:field="*{name}"/></span>
+            <span  class="warn" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">名字错误</span>
+        </div>
+        <div>
+            <span>年龄:</span>
+            <span><input type="number" th:field="*{age}"/></span>
+            <span  class="warn" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">年龄错误</span>
+        </div>
+        <div>
+            <span>邮箱:</span>
+            <span><input TYPE="text" th:field="*{email}"/></span>
+            <span  class="warn" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">邮箱错误</span>
+        </div>
+        <div>
+            <span>验证答案:</span>
+            <span><input TYPE="text" th:field="*{answer}"/></span>
+            <span  class="warn" th:if="${#fields.hasErrors('answer')}" th:errors="*{answer}">答案错误</span>
+        </div>
+        <div>
+            <span>
+                <button type="submit">提交</button>
+            </span>
+        </div>
+    </div>
+</form>
+</body>
+</html>
+ 

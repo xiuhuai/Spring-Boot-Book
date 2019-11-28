@@ -1,0 +1,13 @@
+<html>
+<body>
+<div th:each="user: ${user}">
+    恭喜您,<span th:text="${user.name}">名字</span>(先生/女士),数据提交成功!
+    <div>您的年龄是:
+        <span th:text="${user.age}"></span></div>
+    <div> 您的邮箱是:
+        <span th:text="${user.email}"></span>
+    </div>
+</div>
+
+</body>
+</html>

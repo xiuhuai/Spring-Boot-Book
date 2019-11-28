@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--Thymeleaf首先需要改写html标签-->
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:text="${name}"></div>
+<!--thymeleaf中URL写法-->
+<a th:href="@{http://blog.eg.com/}">绝对路径</a>
+<a th:href="@{/}">相对路径</a>
+<a th:href="@{css/bootstrap.min.css}">Content路径，默认访问static下的css文件夹</a>
+<!--thymeleaf中URL写法-->
+
+<span th:text="'欢迎您, ' + ${name} + '!'"></span>
+<span th:text="|欢迎您 ${name}!|"></span>
+
+<span th:text="2+3">2 + 3</span><br />
+<span th:text="4%2">4 % 2</span><br />
+
+<div th:if="${name} eq longzhonghua">
+    <span>欢迎您,管理员</span>
+</div>
+<div th:if="${name} eq zhonghua">
+    <span>欢迎您,vip会员</span>
+</div>
+
+<div th:if="${age} lt 18">
+    <span>没成年</span>
+</div>
+
+
+<span th:if="${name} == null">为空</span>
+<span th:if="${name} != null">不为空</span>
+<span th:if="${#strings.isEmpty(name)}">空的</span>
+<span th:if="${name} eq longzhonghua">相同</span>
+<span th:if="${name} ne long">不相同</span>
+<span th:text="${name} ?: '默认值'"></span>
+<span th:if="${#strings.contains(name,'long')}">包含long</span>
+</body>
+</html>

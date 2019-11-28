@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+
+</head>
+<body>
+<div class="container-fluid">
+    <div><span >搜索词：</span><span th:text="${keys}">mav</span></div>
+    <div class="row-fluid">
+        <div class="span12">
+
+            <div th:each="item : ${page.content}">
+                <span th:text="${item.id}">id</span>
+                <span th:text="${item.name}">name</span> <span th:text="${item.body}">body</span></div>
+        </div>
+
+        <div>
+            <span th:text="共+${page.totalPages}+页"></span>
+            <a th:href="@{/search(key=${keys},start=0,)}">[首页]</a>
+            <a th:if="${not page.isFirst()}" th:href="@{/search(key=${keys},start=${page.number-1})}">[上页]</a>
+            <a th:if="${not page.isLast()}" th:href="@{/search(key=${keys},start=${page.number+1})}">[下页]</a>
+            <a th:href="@{/search(key=${keys},start=${page.totalPages-1})}">[末页]</a>
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>

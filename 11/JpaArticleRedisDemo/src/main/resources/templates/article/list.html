@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>
+                        ID
+
+                    </th>
+                    <th>
+                        title
+                    </th>
+                    <th>
+                        创建时间
+                    </th>
+
+                    <th>
+                        操作
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="item : ${page.content}">
+                    <td th:text="${item.id}">id</td>
+                    <td th:text="${item.title}">title</td>
+                    <!--  <td  th:text="${item.create_time}">
+                          &lt;!&ndash; <td th:text="${#dates.format(item.create_time, 'yyyy-MM-dd')}">create_time</td>&ndash;&gt;
+                         &lt;!&ndash; 时间转换有点问题&ndash;&gt;
+
+                      </td>-->
+                    <td th:text="${#dates.format(item.createTime, 'yyyy-MM-dd HH:mm:ss')}"></td>
+
+
+                    <td>
+                        <a th:href="@{'/article/'+${item.id}}" class="btn btn-outline-info">查看</a>
+
+                        <a th:href="@{'/article/edit/'+${item.id}}" class="btn btn-outline-success">编辑</a>
+
+                        <!--  <a th:href="@{/admin/system/delete(id=${item.id})}" class="btn btn-outline-danger">删除</a>-->
+                        <!-- 偏重的删除代码-->
+                        <!--<form th:action="@{'/admin/article/'+${item.id}}"   method="post" style=" margin:0px; display: inline">
+                            <input type="hidden" name="_method" value="DELETE"/>
+                            <input type="submit" class="btn btn-outline-danger" value="删除"/>
+                        </form>-->
+                        <button th:attr="del_uri=@{/article/}+${item.id}" class="btn btn-outline-danger deleteBtn">删除
+                        </button>
+
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <!--    删除-->
+        <form id="deleteEmpForm" method="post">
+            <!-- <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">-->
+
+            <input type="hidden" name="_method" value="delete"/>
+        </form>
+        <div>
+            <a th:href="@{/article(start=0)}">[首页]</a>
+            <a th:if="${not page.isFirst()}" th:href="@{/article(start=${page.number-1})}">[上页]</a>
+            <a th:if="${not page.isLast()}" th:href="@{/article(start=${page.number+1})}">[下页]</a>
+            <a th:href="@{/article(start=${page.totalPages-1})}">[末页]</a>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+			$(".deleteBtn").click(function(){
+			    //删除
+			    $("#deleteEmpForm").attr("action",$(this).attr("del_uri")).submit();
+			    return false;
+            });
+
+
+</script>
+
+</body>
+</html>

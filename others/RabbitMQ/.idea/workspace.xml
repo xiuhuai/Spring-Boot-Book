@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3090f045-c426-4c40-9bee-cf2f3ac933ca" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>recei</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test/java/com/example/demo/mq/SenderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controller/Send.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/Receiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/ReceiverTwo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/Sender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/RabbitConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controller/TopicSend.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/fanout/FanoutReceiverB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controller/FanoutSend.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/queue/Receiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/queue/ReceiverTwo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/queue/Sender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controller/QueueSend.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controller/ObjectSend.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controller/FanoutSendController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controller/ObjectSendController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/object/ObjectSender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controller/TopicSendController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/topic/TopicReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/topic/TopicSender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/fanout/FanoutSender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controller/QueueSendController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/queue/QueueSender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/fanout/FanoutReceiverA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/Custom/MessageReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controller/CustomController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/Custom/CustomReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/Custom/CustomSender.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/example/demo/controller/QueueSendTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/config/CustomRabbitConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/config/FanoutRabbitConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/config/ObjectRabbitConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/config/QueueRabbitConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/config/TopicRabbitConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/config/TopicConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/queue/QueueReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/topic/TopicReceiverTwo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/controller/sd.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/object/ObjectReceiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/config/rabbitmq/CustomConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demo/mq/queue/QueueReceiverTwo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/example/demo/controller/MQTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="G:/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="G:\apache-maven-3.6.1\conf\settingsforalibaba.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="RabbitMQ" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="RabbitMQ" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="456" />
+    <option name="height" value="728" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="RabbitMQ" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="I:\spring boot2\Spring Boot Book\code\others\RabbitMQ" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556089619589" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Spring Boot Admin" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.demo.controller" />
+      <recent name="com.example.demo.mq" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.demo.mq" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.MQTest.fanoutSender">
+    <configuration name="RabbitMqApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.RabbitMqApplication" />
+      <module name="RabbitMQ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MQTest.fanoutSender" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RabbitMQ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.controller.MQTest" />
+      <option name="METHOD_NAME" value="fanoutSender" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MQTest.sendTopic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RabbitMQ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.controller.MQTest" />
+      <option name="METHOD_NAME" value="sendTopic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MQTest.sendTopic2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RabbitMQ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.controller.MQTest" />
+      <option name="METHOD_NAME" value="sendTopic2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MQTest.sendTopic3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RabbitMQ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.controller.MQTest" />
+      <option name="METHOD_NAME" value="sendTopic3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MQTest.fanoutSender" />
+        <item itemvalue="Application.RabbitMqApplication" />
+        <item itemvalue="JUnit.MQTest.sendTopic3" />
+        <item itemvalue="JUnit.MQTest.sendTopic2" />
+        <item itemvalue="JUnit.MQTest.sendTopic" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3090f045-c426-4c40-9bee-cf2f3ac933ca" name="Default Changelist" comment="" />
+      <created>1549163060273</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1549163060273</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="MQTest_sendOject2 - 2019.04.23 at 12h 22m 02s.xml">
+      <configuration name="MQTest.sendOject2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MQTest_senddelay - 2019.04.24 at 14h 29m 15s.xml">
+      <configuration name="MQTest.senddelay" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MQTest_sendOject - 2019.04.24 at 14h 41m 40s.xml">
+      <configuration name="MQTest.sendOject" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MQTest_sendTopic - 2019.04.24 at 14h 47m 29s.xml">
+      <configuration name="MQTest.sendTopic" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MQTest_sendTopic2 - 2019.04.24 at 14h 47m 50s.xml">
+      <configuration name="MQTest.sendTopic2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MQTest_sendTopic2 - 2019.04.24 at 14h 48m 36s.xml">
+      <configuration name="MQTest.sendTopic2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MQTest_sendTopic3 - 2019.04.24 at 14h 48m 51s.xml">
+      <configuration name="MQTest.sendTopic3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MQTest_fanoutSender - 2019.04.24 at 14h 53m 16s.xml">
+      <configuration name="MQTest.fanoutSender" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MQTest_fanoutSender - 2019.04.24 at 14h 54m 07s.xml">
+      <configuration name="MQTest.fanoutSender" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MQTest_fanoutSender - 2019.05.09 at 09h 50m 18s.xml">
+      <configuration name="MQTest.fanoutSender" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20213333" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30323678" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32879046" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32879046" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="CheckStyle" order="11" visible="true" weight="0.32879046" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="12" weight="0.32879046" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.32980332" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/demo/mq/SenderTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/demo/RabbitMqApplicationTests.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/mq/object/ObjectSender.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/mq/fanout/FanoutSender.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/mq/topic/TopicReceiverTwo.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.1.3.RELEASE/spring-rabbit-2.1.3.RELEASE-sources.jar!/org/springframework/amqp/rabbit/annotation/RabbitHandler.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/mq/topic/TopicReceiver.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/2.1.3.RELEASE/spring-amqp-2.1.3.RELEASE-sources.jar!/org/springframework/amqp/core/AmqpTemplate.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/2.1.3.RELEASE/spring-amqp-2.1.3.RELEASE-sources.jar!/org/springframework/amqp/core/Message.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/mq/queue/QueueSender.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.1.3.RELEASE/spring-rabbit-2.1.3.RELEASE-sources.jar!/org/springframework/amqp/rabbit/annotation/RabbitListener.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/mq/fanout/FanoutReceiverB.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controller/sd.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/mq/fanout/FanoutReceiverA.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/mq/object/ObjectReceiver.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controller/ObjectSendController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controller/QueueSendController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controller/TopicSendController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controller/CustomController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/mq/queue/QueueReceiverTwo.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/mq/queue/QueueReceiver.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/mq/topic/TopicSender.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/config/rabbitmq/CustomConfig.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/model/User.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/mq/Custom/CustomReceiver.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/mq/Custom/CustomSender.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/RabbitMqApplication.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties" />
+    <entry file="file://$PROJECT_DIR$/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/config/rabbitmq/TopicConfig.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/config/rabbitmq/ObjectConfig.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/controller/FanoutSendController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/config/rabbitmq/QueueConfig.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demo/config/rabbitmq/FanoutConfig.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/demo/controller/MQTest.java" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

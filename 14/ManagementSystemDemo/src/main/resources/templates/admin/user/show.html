@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link  th:href="@{/css/bootstrap.min14ed.css?v=3.3.6}"  rel="stylesheet">
+    <link th:href="@{/css/font-awesome.min93e3.css?v=4.4.0}"  rel="stylesheet">
+
+    <link th:href="@{/css/animate.min.css}"  rel="stylesheet">
+    <link th:href="@{/css/style.min862f.css?v=4.1.0}"   rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+
+</head>
+
+<body>
+
+<div class="with:80%">
+    <div th:text="${adminUser.id}"></div>
+    <div th:text="${adminUser.name}"></div>
+    <div th:text="${adminUser.cnname}"></div>
+    <div th:text="${adminUser.status}"></div>
+           
+
+        </div>
+ 
+</body>
+</html>

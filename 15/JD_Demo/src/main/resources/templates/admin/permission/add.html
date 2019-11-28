@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8"/>
+    <link href="/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+
+    <link href="/css/animate.min.css" rel="stylesheet">
+    <link href="/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+
+    <!-- CSRF -->
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <!-- default header name is X-CSRF-TOKEN -->
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+</head>
+<body>
+
+<form class="form-horizontal" th:action="@{/admin/permission/add}" method="post">
+
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">权限名称</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="name" id="name" placeholder="name"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="resource_type" name="resource_type" class="col-sm-2 control-label">权限类型</label>
+        <div class="col-sm-10">
+            <select class="form-control" name="resourceType">
+                <option value="menu"/>
+                菜单</option>
+                <option value="button"/>
+                按钮 </option>
+
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">URL</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="url" id="url" placeholder="url"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">角色</label>
+        <div class="col-sm-10">
+            <select class="form-control" name="role">
+                <option th:each="sysRole : ${sysRole}" th:text="${sysRole.cnname}" th:value="${sysRole.role}"/>
+                </option>
+
+            </select>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <input type="submit" value="提交" class="btn btn-info"/>
+            &nbsp; &nbsp; &nbsp;
+            <input type="reset" value="重置" class="btn btn-info"/>
+        </div>
+
+    </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link  th:href="@{/admin/css/bootstrap.min14ed.css?v=3.3.6}"  rel="stylesheet">
+    <link th:href="@{/admin/css/font-awesome.min93e3.css?v=4.4.0}"  rel="stylesheet">
+
+    <link th:href="@{/admin/css/animate.min.css}"  rel="stylesheet">
+    <link th:href="@{/admin/css/style.min862f.css?v=4.1.0}"   rel="stylesheet">
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+
+</head>
+
+<body>
+<table>
+ <tr th:each="item : ${page.content}">
+                        <td th:text="${item.id}">类别编号</td>
+     <td th:text="${item.email}">类别编号</td>
+     <td th:text="${item.userName}">类别编号</td>
+     <td> <a th:href="@{'/article/'+${item.id}}">查看</a>
+         <a th:href="@{/articleedit(id=${item.id})}">编辑</a> <a th:href="@{/articleeditr(id=${item.id})}">编辑2</a>
+         <a th:href="@{/articledelete(id=${item.id})}">删除</a>
+
+
+         <form th:action="@{'/article/'+${item.id}}"   method="post">
+             <input type="hidden" name="_method" value="DELETE"/>
+             <input type="submit" value="删除"/>
+         </form>
+     </td>
+</tr></table>
+ <div>
+     <a th:href="@{/article(start=0)}">[首页]</a>
+     <a th:if="${not page.isFirst()}" th:href="@{/article(start=${page.number-1})}">[上页]</a>
+     <a th:if="${not page.isLast()}" th:href="@{/article(start=${page.number+1})}">[下页]</a>
+     <a th:href="@{/article(start=${page.totalPages-1})}">[末页]</a>
+ </div>
+
+
+
+</body>
+</html>
