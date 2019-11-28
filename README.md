@@ -1,13 +1,13 @@
 
-###### Spring-Boot-Book目录的代码是《Java Spring自动化框架—Spring Boot2.x入门、进阶、商业实战》的配套源码
+###### Spring-Boot-Book目录的代码是《Spring Boot实战派》的配套源码
 
 ###### 购买链接：
 
-当当： 
+当当：http://product.dangdang.com/28488616.html
 
-淘宝:  
+淘宝: https://detail.tmall.com/item.htm?spm=a230r.1.14.71.3f09173dsFcdvL&id=609074835276&ns=1&abbucket=18
 
-京东： 
+京东：https://item.jd.com/62624049070.html
 
 # 注意
 
@@ -29,6 +29,6 @@
 # 作者
 - 龙中华 363694485@qq.com
 
-- Spring Boot QQ技术交流群：755572590
+- QQ技术交流群：755572590，36群：486517100
 
  
