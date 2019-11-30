@@ -3,13 +3,13 @@
 
 ###### 购买链接：
 
-当当自营：http://product.dangdang.com/28488616.html
+- 当当自营：http://product.dangdang.com/28488616.html
 
-天猫出版社旗舰店: https://detail.tmall.com/item.htm?spm=a230r.1.14.71.3f09173dsFcdvL&id=609074835276&ns=1&abbucket=18
+- 天猫出版社旗舰店: https://detail.tmall.com/item.htm?spm=a230r.1.14.71.3f09173dsFcdvL&id=609074835276&ns=1&abbucket=18
 
-京东自营：https://item.jd.com/12760076.html
+- 京东自营：https://item.jd.com/12760076.html
 
-京东出版社旗舰店：https://item.jd.com/62624049070.html
+- 京东出版社旗舰店：https://item.jd.com/62624049070.html
 
 # 注意
 
