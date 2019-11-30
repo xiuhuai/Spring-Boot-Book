@@ -1,11 +1,8 @@
 # 购买链接
 
 - 当当自营：http://product.m.dangdang.com/28488616.html?unionid=P-107123335m-:-dd_1
-
-- 天猫出版社旗舰店: https://detail.tmall.com/item.htm?spm=a230r.1.14.71.3f09173dsFcdvL&id=609074835276&ns=1&abbucket=18
-
 - 京东自营：https://u.jd.com/J8fvSG
-
+- 天猫出版社旗舰店: https://detail.tmall.com/item.htm?spm=a230r.1.14.71.3f09173dsFcdvL&id=609074835276&ns=1&abbucket=18
 - 京东出版社旗舰店：https://item.jd.com/62624049070.html
 
 # 注意
