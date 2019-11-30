@@ -1,7 +1,4 @@
-
-###### 此为《Spring Boot实战派》的配套源码
-
-###### 购买链接：
+#购买链接：
 
 - 当当自营：http://product.dangdang.com/28488616.html
 
