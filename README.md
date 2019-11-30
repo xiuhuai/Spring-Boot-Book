@@ -1,5 +1,5 @@
 
-###### Spring-Boot-Book目录的代码是《Spring Boot实战派》的配套源码
+###### 此为《Spring Boot实战派》的配套源码
 
 ###### 购买链接：
 
