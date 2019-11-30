@@ -1,4 +1,4 @@
-#购买链接：
+# 购买链接
 
 - 当当自营：http://product.dangdang.com/28488616.html
 
