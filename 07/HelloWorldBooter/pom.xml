@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- 模型版本，声明项目描述符遵循哪一个POM模型版本，
+	尽管模型本身的版本很少改变，但是它仍然是必不可少的， 这是为了当Maven引入了新的特性或者其他模型变更的时候，确保稳定性。 -->
+	<modelVersion>4.0.0</modelVersion>
+	<!-- 父项目的坐标，如果项目没规定某个元素的值，那么父项目中的对应值即为项目的默认值，坐标包括groupId，artifactId和version。-->
+	<parent>
+
+		<!--  被继承的父项目的唯一标识符 -->
+		<groupId>org.springframework.boot</groupId>
+		<!--  被继承的父项目的构件标识符 -->
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<!--  被继承的父项目的版本号 -->
+		<version>2.1.3.RELEASE</version>
+		<!-- 父项目的pom.xml文件的相对路径，相对路径允许是一个不同的路径，默认值是../pom.xml
+		Maven先在构建当前项目的地方寻找父项目的pom，然后在文件系统的relativePath位置，如果没找到继续在本地仓库，最后在远程仓库寻找父项目的pom。 -->
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<!-- 公司或者组织的唯一标志（项目的全球唯一标识符），并且配置时生成的路径也是由此生成，通常使用全限定的包名区分该项目和其他项目
+		 如com.companyname.project，maven会将该项目打成的jar包放本地路径：/com/companyname/project -->
+	<groupId>com.example</groupId>
+
+	<!-- 项目的唯一ID，一个groupId下面可能多个项目，靠artifactId来区分 -->
+	<artifactId>demo</artifactId>
+	<!-- 版本号，格式为:主版本.次版本.增量版本-限定版本号 -->
+	<version>0.0.1-SNAPSHOT</version>
+	<!--项目的名称, Maven产生的文档用 -->
+	<name>HelloWorldBoot</name>
+	<!-- 项目的详细描述, Maven 产生的文档用。 当这个元素能够用HTML格式描述时（例如，CDATA中的文本会被解析器忽略，就可以包含HTML标
+        签）。 -->
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<!-- 项目开发的java版本号。 -->
+		<java.version>1.8</java.version>
+	</properties>
+	<!-- 项目的依赖项，可以通过，该元素描述了项目相关的所有依赖，它们自动从项目定义的仓库中下载。 -->
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<!-- 构建项目（打包生成可执行文件）需要的信息 -->
+	<build>
+		<!-- 项目使用的插件列表 。 -->
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
