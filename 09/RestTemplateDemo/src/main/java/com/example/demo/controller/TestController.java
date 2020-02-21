@@ -50,6 +50,8 @@ public class TestController {
        // 如果获取的值为“null”，则需要把URI添加到response信息的header中。添加方法为：“response.addHeader("Location",uri)”
         response.addHeader("Location", "success?name=" + name + "&id=" + id + "&status=success");
         return "redirect:/success?name=" + name + "&id=" + id + "&status=success";
+        // return "redirect:/success?name=" + URLEncoder.encode(name, "UTF-8") + "&id=" + id + "&status=success";
+
     }
 
 }
