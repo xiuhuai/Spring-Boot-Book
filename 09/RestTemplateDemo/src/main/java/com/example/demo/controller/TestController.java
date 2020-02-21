@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,15 +38,17 @@ public class TestController {
         return user;
     }
 
-
+    @ResponseBody
     @RequestMapping(path = "success")
-    public String loginSuccess(String name) {
+    public String loginSuccess(String name, Integer id) {
         return "welcome " + name;
     }
 
-    @RequestMapping(value = "/post", method =  RequestMethod.POST)
+    @RequestMapping(value = "/post", method = RequestMethod.POST)
     public String post(HttpServletRequest request, @RequestParam(value = "name", required = false) String name,
-                       @RequestParam(value = "password", required = false) String password,  @RequestParam(value = "id", required = false) Integer id) {
+                       @RequestParam(value = "password", required = false) String password, @RequestParam(value = "id", required = false) Integer id, HttpServletResponse response) {
+       // 如果获取的值为“null”，则需要把URI添加到response信息的header中。添加方法为：“response.addHeader("Location",uri)”
+        response.addHeader("Location", "success?name=" + name + "&id=" + id + "&status=success");
         return "redirect:/success?name=" + name + "&id=" + id + "&status=success";
     }
 

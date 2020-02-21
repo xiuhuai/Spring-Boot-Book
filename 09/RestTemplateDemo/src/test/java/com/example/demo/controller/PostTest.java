@@ -72,7 +72,9 @@ public class PostTest {
         paramMap.add("id", 4);
 
         RestTemplate client = restTemplateBuilder.build();
+
         URI response = client.postForLocation("http://localhost:8080/post",paramMap);
+
          System.out.println(response);
     }
 

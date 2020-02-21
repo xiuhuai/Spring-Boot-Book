@@ -43,7 +43,7 @@ public class propertTest {
     @Autowired
     private GetPersonInfoProperties getPersonInfoProperties;
     @Test
-    public void getpersonproperties() {
+    public void getPersonproperties() {
         System.out.println(getPersonInfoProperties.getName()+getPersonInfoProperties.getAge());
     }
 }
