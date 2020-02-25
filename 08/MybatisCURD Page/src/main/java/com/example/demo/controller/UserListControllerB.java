@@ -19,7 +19,7 @@ public class UserListControllerB {
     UserMapper userMapper;
     //http://localhost:8080/listall2?pageNum=1&pageSize=2
     @RequestMapping("/listall2")
-    // 感谢网友ygl提供的修正建议。
+    // 如果方法的参数不指定默认值，且请求地址也没有指定参数值，则项目运行时会报错。此处为网友ygl提供的修正建议。
     public Page<User> getUserList(@RequestParam(value="pageNum",defaultValue="0")int pageNum, @RequestParam(value = "pageSize", defaultValue = "5") int pageSize)
     //public Page<User> getUserList(Integer pageNum, Integer pageSize)
     {
