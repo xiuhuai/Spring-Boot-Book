@@ -19,6 +19,7 @@ public class UserListControllerB {
     UserMapper userMapper;
     //http://localhost:8080/listall2?pageNum=1&pageSize=2
     @RequestMapping("/listall2")
+    // 感谢网友ygl提供的修正建议。
     public Page<User> getUserList(@RequestParam(value="pageNum",defaultValue="0")int pageNum, @RequestParam(value = "pageSize", defaultValue = "5") int pageSize)
     //public Page<User> getUserList(Integer pageNum, Integer pageSize)
     {
