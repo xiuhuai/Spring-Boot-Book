@@ -72,7 +72,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
-        <!--如果没有此依赖，则视图页面的用户信息无法显示。感谢网友星期八提醒-->
+        <!--如果没有此依赖，则视图页面的用户信息无法显示。感谢网友Freen提醒-->
 		<dependency>
 			<groupId>org.thymeleaf.extras</groupId>
 			<artifactId>thymeleaf-extras-springsecurity5</artifactId>
