@@ -19,6 +19,8 @@ import java.io.Serializable;
 
 @Entity
 @Data
+//这里不能用order作为MySQL的表名，违背了MySQL表名规则
+@Table(name = "orders")
 public class Order extends BaseEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//由数据库控制,auto是程序统一控制
