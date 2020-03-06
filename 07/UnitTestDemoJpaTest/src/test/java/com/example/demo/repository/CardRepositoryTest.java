@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -31,9 +32,10 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 // SpringJUnit支持，由此引入Spring-Test框架支持！
 //启动整个spring的工程
- @SpringBootTest
+@SpringBootTest
 //@DataJpaTest
 @Transactional
+//@Rollback(false)
 public class CardRepositoryTest {
     @Autowired
     private  CardRepository  cardRepository;
@@ -51,7 +53,8 @@ public class CardRepositoryTest {
         Card card=new Card();
 
         card.setNum(3);
-         cardRepository.save(card);
+        cardRepository.save(card);
+        //throw new RuntimeException();
     }
 
 
