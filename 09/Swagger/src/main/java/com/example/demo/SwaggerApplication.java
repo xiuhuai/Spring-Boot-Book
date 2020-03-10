@@ -1,14 +1,15 @@
 package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-@EnableAutoConfiguration
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 @SpringBootApplication
-public class HelloWorldApplication {
+@EnableSwagger2
+public class SwaggerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HelloWorldApplication.class, args);
+		SpringApplication.run(SwaggerApplication.class, args);
 	}
 
 }
