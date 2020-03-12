@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.annotations.ApiIgnore;
 
 @RestController
-
 public class HelloWorldController {
-
     @ApiOperation(value = "hello", notes = "notes ")
     @RequestMapping("/hello")
     public String hello() throws Exception {
