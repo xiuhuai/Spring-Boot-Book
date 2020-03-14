@@ -20,7 +20,7 @@ import javax.annotation.Resource;
  */
 @Controller
 @RequestMapping("article")
-public class AritcleController {
+public class ArticleController {
     @Autowired
 
     private ArticleRepository articleRepository;
