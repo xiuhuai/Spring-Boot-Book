@@ -92,7 +92,7 @@ public class AdminController {
     @RequestMapping("/add")
     @RequiresPermissions("admin:add")
     public String adminAdd() {
-        return "Del";
+        return "Add";
     }
     /**
      * 用户删除;
