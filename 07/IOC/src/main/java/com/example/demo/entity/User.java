@@ -1,8 +1,6 @@
 package com.example.demo.entity;
 
 import lombok.Data;
-import sun.plugin2.message.Serializer;
-
 import java.io.Serializable;
 
 /**
