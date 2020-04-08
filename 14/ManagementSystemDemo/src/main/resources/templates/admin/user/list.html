@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link  th:href="@{/css/bootstrap.min14ed.css?v=3.3.6}"  rel="stylesheet">
+    <link th:href="@{/css/font-awesome.min93e3.css?v=4.4.0}"  rel="stylesheet">
+
+    <link th:href="@{/css/animate.min.css}"  rel="stylesheet">
+    <link th:href="@{/css/style.min862f.css?v=4.1.0}"   rel="stylesheet">
+
+<!--    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>-->
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>
+                        用户ID
+
+                    </th>
+                    <th>
+                        用户名
+                    </th>
+                    <th>
+                        创建时间
+                    </th>
+                    <th>
+                        状态
+                    </th>
+                    <th>
+                        操作
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="item : ${page.content}">
+                    <td th:text="${item.id}">id</td>
+                    <td th:text="${item.name}">name</td>
+                    <td>
+                        01/04/2018
+                    </td>
+                    <td th:text="${item.enabled}">状态</td>
+                    <td>
+                        <a th:href="@{'/admin/user/'+${item.id}}"  class="btn btn-outline-info">查看</a>
+
+                        <a th:href="@{/admin/user/edit(id=${item.id})}"  class="btn btn-outline-success">编辑</a>
+
+                      <!--  <a th:href="@{/sys/system/delete(id=${item.id})}" class="btn btn-outline-danger">删除</a>-->
+                        <form th:action="@{'/admin/system/'+${item.id}}"   method="post" style=" margin:0px; display: inline">
+                            <input type="hidden" name="_method" value="DELETE"/>
+                            <input type="submit" class="btn btn-outline-danger" value="删除"/>
+                        </form>
+                        <a class="btn btn-outline-warning">重置</a>
+
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

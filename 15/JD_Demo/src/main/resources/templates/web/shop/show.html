@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${product.name}">name</title>
+    <!--[if lt IE 9]>
+
+    <![endif]-->
+
+</head>
+
+<body>
+
+<div class="with:80%">
+    <p>产品ID:<span th:text="${product.id}"></span></p>
+    <p>产品名称: <span th:text="${product.name}"></span></p>
+    <p>产品价格:<span th:text="${product.price}"></span></p>
+
+</div>
+<!–匿名–>
+<div sec:authorize="isAnonymous()">
+    未登录，点击 <a th:href="@{/home/login}">登录</a>
+</div>
+<!–登录–>
+<div sec:authorize="isAuthenticated()">
+    <p>已登录</p>
+    <p>登录名：<span sec:authentication="name"></span></p>
+    <p>角色：<span sec:authentication="principal.authorities"></span></p>
+    <p>id：<span sec:authentication="principal.id"></span></p>
+    <p>Username：<span sec:authentication="principal.username"></span></p>
+    <p>Password：<span sec:authentication="principal.password"></span></p>
+</div>
+
+<form class="form-signin" th:action="@{/cart}" id="form" name="form" method="post">
+    <div class="form-group">
+        <!--如果数量被减少为0,则代表删除此商品-->
+    <input type="number" name="product_num" id="product_num" min="0" max="10" value="1"/>
+    </div>
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+    <input type="hidden" name="product_id" id="product_id" th:value="${product.id}"/>
+    <input type="hidden" name="product_price" id="product_price" th:value="${product.price}"/>
+    <input type="hidden" name="product_name" id="product_name" th:value="${product.name}"/>
+    <input th:if=${principals!="anonymousUser"} name="user_id" id="user_id" th:value="${principals.id}">
+    <button type="submit" id="submit">加入购物车</button>
+
+</form>
+</body>
+</html>

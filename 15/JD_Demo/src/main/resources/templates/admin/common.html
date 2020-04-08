@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<ul class="nav" id="side-menu" th:fragment="aside">
+    <li class="nav-header">
+        <div class="dropdown profile-element">
+            <span><img alt="image" class="img-circle" src="/img/profile_small.jpg"/></span>
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                               <span class="block m-t-xs"><strong class="font-bold"><span
+                                       sec:authentication="name"></span></strong></span>
+
+                                <span sec:authorize="hasRole('ROLE_ADMIN')" class="text-muted text-xs block">管理员<b
+                                        class="caret"></b> </span>
+                        <span sec:authorize="hasRole('ROLE_USER')" class="text-muted text-xs block">普通用户<b
+                                class="caret"></b> </span>
+
+                                </span>
+            </a>
+            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                <li><a class="J_menuItem" href="form_avatar.html">修改头像</a>
+                </li>
+                <li><a class="J_menuItem" href="profile.html">个人资料</a>
+                </li>
+                <li><a class="J_menuItem" href="contacts.html">联系我们</a>
+                </li>
+                <li><a class="J_menuItem" href="mailbox.html">信箱</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <form th:action="@{/logout}" method="post">
+                        <input type="submit" class="J_menuItem" value="安全退出"/>
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <div class="logo-element">R
+        </div>
+    </li>
+    <li>
+        <a href="#">
+            <i class="fa fa-home"></i>
+            <span class="nav-label">主页</span>
+            <span class="fa arrow"></span>
+        </a>
+        <ul class="nav nav-second-level">
+
+            <li>
+
+                <a class="J_menuItem" href="/html/intro.html" data-index="0">了解Ran</a>
+            </li>
+
+        </ul>
+
+    </li>
+
+    <li>
+        <a href="#">
+            <i class="fa fa-gear"></i>
+            <span class="nav-label">系统管理</span>
+            <span class="fa arrow"></span>
+        </a>
+        <ul class="nav nav-second-level">
+
+
+            <li>
+                <a href="#">管理员管理 <span class="fa arrow"></span></a>
+                <ul class="nav nav-third-level">
+
+                    <li>
+                        <a class="J_menuItem" href="/admin/user/add">添加管理员</a>
+                    </li>
+                    <li>
+                        <a class="J_menuItem" href="/admin/user">管理管理员</a>
+                    </li>
+
+                    <li>
+                        <a class="J_menuItem" href="/admin/role/add">添加角色</a>
+                    </li>
+                    <li>
+                        <a class="J_menuItem" href="/admin/permission/add">添加权限</a>
+                    </li>
+
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">日志管理 <span class="fa arrow"></span></a>
+                <ul class="nav nav-third-level">
+                    <li><a class="J_menuItem" href="/admin/loginrecord">管理员登录日志</a></li>
+                    <li><a class="J_menuItem" href="/admin/memberloginlog">会员登录日志</a></li>
+                    <li><a class="J_menuItem" href="/admin/requestlog">请求日志</a></li>
+
+                </ul>
+            </li>
+            <li>
+
+            </li>
+
+        </ul>
+
+    </li>
+
+    <li>
+        <a href="#">
+            <i class="fa fa-user"></i>
+            <span class="nav-label">会员管理</span>
+            <span class="fa arrow"></span>
+        </a>
+        <ul class="nav nav-second-level">
+
+            <li>
+                <a class="J_menuItem" href="/admin/member/add">添加会员</a>
+            </li>
+            <li>
+                <a class="J_menuItem" href="/admin/member/role/add">添加角色</a>
+            </li>
+            <li>
+                <a class="J_menuItem" href="/admin/member">管理会员</a>
+            </li>
+            <li><a class="J_menuItem" href="/home/register/mobile">会员注册(手机号)</a></li>
+            <li><a class="J_menuItem" href="/home/register/email">会员注册(email)</a></li>
+            <li><a class="J_menuItem" href="/home/login">会员登录</a></li>
+        </ul>
+
+    </li>
+
+
+    <li>
+        <a href="#">
+            <i class="fa fa-bolt"></i>
+            <span class="nav-label">功能模块</span>
+            <span class="fa arrow"></span>
+        </a>
+        <ul class="nav nav-second-level">
+            <li>
+                <a href="#">分类管理 <span class="fa arrow"></span></a>
+                <ul class="nav nav-third-level">
+                    <li>
+                        <a class="J_menuItem" href="/admin/category/add">添加分类</a>
+                    </li>
+                    <li>
+                        <a class="J_menuItem" href="/admin/category/">管理分类</a>
+                    </li>
+
+
+                </ul>
+            </li>
+
+
+            <li>
+                <a href="#">文章管理 <span class="fa arrow"></span></a>
+                <ul class="nav nav-third-level">
+                    <li>
+                        <a class="J_menuItem" href="/admin/article/add">添加文章</a>
+                    </li>
+                    <li>
+                        <a class="J_menuItem" href="/admin/article/">管理文章</a>
+                    </li>
+
+
+                </ul>
+            </li>
+
+
+        </ul>
+
+    </li>
+
+
+    <li>
+        <a href="#"><i class="fa fa-video-camera"></i><span class="nav-label">系统监控</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level">
+            <li><a class="J_menuItem" href="">在线用户</a>
+            </li>
+            <li><a class="J_menuItem" href="/druid/">Druid Monitor</a>
+            </li>
+
+            <li>
+                <a class="J_menuItem" href="/admin/quartz">定时任务</a>
+            </li>
+
+        </ul>
+    </li>
+
+
+</ul>
+
+<div class="footer" th:fragment="footer">
+    <div class="pull-right">&copy; 2011-2018 <a href="http://www.jiuzhengyoudao.com/" target="_blank">ran's blog</a>
+    </div>
+</div>
+
+
+</body>
+</html>

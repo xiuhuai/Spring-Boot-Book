@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="admin/header"></head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+<div id="wrapper">
+    <!--左侧导航开始-->
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="nav-close"><i class="fa fa-times-circle"></i>
+        </div>
+        <div class="sidebar-collapse">
+            <div th:replace="~{admin/common :: aside}"></div>
+        </div>
+    </nav>
+    <!--左侧导航结束-->
+    <!--右侧部分开始-->
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+
+                <ul class="nav navbar-top-links navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
+                        </a>
+
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="mailbox.html">
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i> 您有16条未读消息
+                                        <span class="pull-right text-muted small">4分钟前</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="profile.html">
+                                    <div>
+                                        <i class="fa fa-qq fa-fw"></i> 3条新回复
+                                        <span class="pull-right text-muted small">12分钟钱</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a class="J_menuItem" href="notifications.html">
+                                        <strong>查看所有 </strong>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hidden-xs">
+                        <a href="#" class="J_menuItem" data-index="0"><i class="fa fa-cart-arrow-down"></i>欢迎您, <span sec:authentication="principal.cnname"></span></a>
+                    </li>
+                    <li class="dropdown hidden-xs">
+                        <a class="right-sidebar-toggle" aria-expanded="false">
+                            <i class="fa fa-tasks"></i> 主题
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row content-tabs">
+            <button class="roll-nav roll-left J_tabLeft"><i class="fa fa-backward"></i>
+            </button>
+            <nav class="page-tabs J_menuTabs">
+                <div class="page-tabs-content">
+                    <a href="javascript:;" class="active J_menuTab" data-id="index_v1.html">首页</a>
+                </div>
+            </nav>
+            <button class="roll-nav roll-right J_tabRight"><i class="fa fa-forward"></i>
+            </button>
+            <div class="btn-group roll-nav roll-right">
+                <button class="dropdown J_tabClose" data-toggle="dropdown">关闭操作<span class="caret"></span>
+
+                </button>
+
+            </div>
+           <form style="margin:0px;display: inline" th:action="@{/admin/logout}" method="post">
+            <!--   <i class="fa fa fa-sign-out"></i> --> <input type="submit"  class="roll-nav roll-right J_tabExit"  value="退出"/>
+            </form>
+        </div>
+
+        <div th:replace="~{admin/common :: footer}"></div>
+    </div>
+    <!--右侧部分结束-->
+    <!--右侧边栏开始-->
+
+    <!--右侧边栏结束-->
+    <!--mini聊天窗口开始-->
+
+</div>
+<script  th:src="@{/js/jquery.min.js?v=2.1.4}"></script>
+<script  th:src="@{/js/bootstrap.min.js?v=3.3.6}"></script>
+
+<script  th:src="@{/js/plugins/metisMenu/jquery.metisMenu.js}"></script>
+
+<script  th:src="@{/js/plugins/slimscroll/jquery.slimscroll.min.js}"></script>
+
+<script  th:src="@{/js/plugins/layer/layer.min.js}"></script>
+
+<script  th:src="@{/js/hplus.min.js?v=4.1.0}"></script>
+
+<script  th:src="@{/js/contabs.min.js}"></script>
+
+<script  th:src="@{/js/plugins/pace/pace.min.js}"></script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+
+            <div th:each="item : ${map}">
+                <li th:text="${item.key}"></li>
+            </div>
+
+            <div th:each="item : ${map}">
+                <li th:text="${item.value}"></li>
+            </div>
+
+            <div th:each="item:${map}">
+                <li th:text="${item}"></li>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

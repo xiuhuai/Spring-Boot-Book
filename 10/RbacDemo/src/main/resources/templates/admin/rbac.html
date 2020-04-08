@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>登录</title>
+<link  th:href="@{/css/bootstrap.min14ed.css?v=3.3.6}"  rel="stylesheet">
+    <link th:href="@{/css/font-awesome.min93e3.css?v=4.4.0}"  rel="stylesheet">
+
+    <link th:href="@{/css/animate.min.css}"  rel="stylesheet">
+    <link th:href="@{/css/style.min862f.css?v=4.1.0}"   rel="stylesheet">
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+    <script>if(window.top !== window.self){ window.top.location = window.location;}</script>
+    <!-- CSRF -->
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <!-- default header name is X-CSRF-TOKEN -->
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+
+</head>
+
+<body class="gray-bg">
+
+
+  <div sec:authorize="isAuthenticated()"> 已经登录</div>
+        <p th:if="${param.logout}" class="bg-warning">已注销</p>
+        <p th:if="${param.error}" class="bg-danger">有错误，请重试</p>
+
+ </body>
+
+
+ </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!-- CSRF -->
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <!-- default header name is X-CSRF-TOKEN -->
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+</head>
+<body>
+<table  >
+    <tbody>
+    <tr th:each="item : ${cartList}">
+        <td><a th:href="@{'/article/'+${item.id}}" th:text="${item.product_name}"  >title</a>
+        </td>
+
+        <td>价格:<span  th:text="${item.product_price}"  >price</span>
+        <td>数量:<span  th:text="${item.product_num}"  >price</span>
+        </td>
+        <td th:text="${#dates.format(item.createTime, 'yyyy-MM-dd HH:mm:ss')}">yyyy-MM-dd</td>
+    </tr>
+    </tbody>
+</table>
+</body></html>
