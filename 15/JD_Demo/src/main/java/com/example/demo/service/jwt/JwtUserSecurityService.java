@@ -1,18 +1,15 @@
 package com.example.demo.service.jwt;
 
-
 import com.example.demo.entity.member.User;
 import com.example.demo.repository.member.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-
 /**
  * @author longzhonghua
  * @data 2018/11/04 22:30
  */
-
 //@Service
 public class JwtUserSecurityService implements UserDetailsService {
 

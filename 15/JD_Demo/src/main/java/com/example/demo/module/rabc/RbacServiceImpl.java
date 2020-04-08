@@ -27,7 +27,8 @@ public class RbacServiceImpl implements RbacService {
     private SysPermissionRepository permissionRepository;
     @Autowired
     private SysUserRepository sysUserRepository;
-     @Override
+
+    @Override
     public boolean hasPermission(HttpServletRequest request, Authentication authentication) {
         Object principal = authentication.getPrincipal();
         boolean hasPermission = false;
@@ -49,13 +50,13 @@ public class RbacServiceImpl implements RbacService {
             SysUser sysUser = sysUserRepository.findByName(userName);
             try {
                 for (SysRole role : sysUser.getRoles()) {
-                   for (SysPermission permission : role.getPermissions()) {
-                       urls.add(permission.getUrl());
-                       //curds.add(permission.getPermission());
-                       curds.add(permission.getPermission()+permission.getUrl());
-                   }
+                    for (SysPermission permission : role.getPermissions()) {
+                        urls.add(permission.getUrl());
+                        //curds.add(permission.getPermission());
+                        curds.add(permission.getPermission() + permission.getUrl());
+                    }
 
-               }
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }

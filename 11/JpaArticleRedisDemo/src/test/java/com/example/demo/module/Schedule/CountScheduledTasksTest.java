@@ -32,7 +32,7 @@ public class CountScheduledTasksTest {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
     @Test
-    public void syncPostViews() {
+    public void syncViews() {
         Long startTime = System.nanoTime();
         List dtoList = new ArrayList<>();
         Set<String> keySet = stringRedisTemplate.keys("name::*");

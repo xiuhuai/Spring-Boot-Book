@@ -23,7 +23,7 @@ public class CountScheduledTasks {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
-    @Scheduled(cron = "0 00 2 ? * * ") //每天凌晨4:30执行
+    @Scheduled(cron = "0 00 2 ? * * ") //每天凌晨2:00执行
 
     public void syncPostViews() {
         Long startTime = System.nanoTime();

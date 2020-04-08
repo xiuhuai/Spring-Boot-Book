@@ -7,12 +7,10 @@ import org.springframework.security.authentication.LockedException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-
 /**
  * @author longzhonghua
  * @data 2018/11/04 22:30
  */
-
 //@Service
 public class SysSecurityService implements UserDetailsService {
 

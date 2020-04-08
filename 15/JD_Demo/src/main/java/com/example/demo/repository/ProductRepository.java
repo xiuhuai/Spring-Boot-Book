@@ -2,7 +2,6 @@ package com.example.demo.repository;
 
 import com.example.demo.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
-
 /**
  * Copyright (C), 2019-2019, XXX有限公司
  * FileName: ProductRepository

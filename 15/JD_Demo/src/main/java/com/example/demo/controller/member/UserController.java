@@ -44,20 +44,6 @@ public class UserController extends BaseController {
     @Autowired
     private UserRoleRepository userRoleRepository;
 
-/*
-@Autowired
-private UserRepository userRepository;
-*/
-  /*  @RequestMapping("/")
-    public String index(Model model) {
-
-        return "/index";
-    }*/
-
-    /*    @RequestMapping("/toAddUser")
-        public String toAddUser() {
-                return "/admin/addUser";
-        }*/
     @Resource
     private JavaMailSender mailSender;
     @Value("${spring.mail.username}")
@@ -177,31 +163,6 @@ private UserRepository userRepository;
             rabbitTemplate.convertAndSend("reg_email", user.getEmail());
             asyncSendEmailService.sendVerifyemail(user.getEmail());
             //send email 已经异步执行,下面代码注释掉
-           /* String secretKey = UUID.randomUUID().toString(); // 密钥
-            Timestamp outDate = new Timestamp(System.currentTimeMillis() + 30 * 60 * 1000);// 30分钟后过期
-            long date = outDate.getTime() / 1000 * 1000;
-            userRepository.setOutDateAndValidataCode(outDate+"", secretKey, user.getEmail());
-            String key = user.getEmail() + "$" + date + "$" + secretKey;
-            String digitalSignature = MD5Util.encode(key);// 数字签名
-//            String basePath = this.getRequest().getScheme() + "://" + this.getRequest().getServerName() + ":" + this.getRequest().getServerPort() + this.getRequest().getContextPath() + "/newPassword";
-            String resetPassHref = activeuserUrl + "?sid="
-                    + digitalSignature +"&email="+ user.getEmail();
-            String emailContent = MessageUtil.getMessage(mailActiveContent, resetPassHref);
-            MimeMessage mimeMessage = mailSender.createMimeMessage();
-            MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true);
-            helper.setFrom(mailFrom);
-            helper.setTo( user.getEmail());
-            helper.setSubject(mailActiveSubject);
-            helper.setText(emailContent, true);
-            mailSender.send(mimeMessage);*/
-            //sendemail end
-
-
-            // 添加默认收藏夹
-			/*Favorites favorites = favoritesService.saveFavorites(user.getId(), "未读列表");
-			// 添加默认属性设置
-			configService.saveConfig(user.getId(),String.valueOf(favorites.getId()));	*/
-
         } catch (Exception e) {
 
             //logger.error("create user failed, ", e);
@@ -263,83 +224,7 @@ private UserRepository userRepository;
         return "user/activeuserEmail";
 
     }
-//保留的rest返回
-  /*
-   @ResponseBody
-    @RequestMapping(value="/activeuserEmail",method=RequestMethod.GET)
-    public Response activeuserEmail( String email,String sid) {
-        try {
-            User user = userRepository.findByEmail(email);
-            Timestamp outDate = Timestamp.valueOf(user.getOutDate());
-            if(outDate.getTime() <= System.currentTimeMillis()){ //表示已经过期
-                return result(ExceptionMsg.LinkOutdated);
-//                System.out.print("过期");
-            }
-            String key = user.getEmail()+"$"+outDate.getTime()/1000*1000+"$"+user.getValidataCode();//数字签名
-            String digitalSignature = MD5Util.encode(key);
-            if(digitalSignature.equals(sid)) {
-                //return result(ExceptionMsg.LinkOutdated);
-                userRepository.setActive(1, user.getEmail());
 
-
-
-            }
-            if(!digitalSignature.equals(sid)) {
-                return result(ExceptionMsg.LinkOutdated);
-
-            }
-
-
-//            userRepository.
-        } catch (Exception e) {
-            // TODO: handle exception
-            logger.error("failed, ", e);
-//            return result(ExceptionMsg.FAILED);
-        }
-        return result();
-
-    }*/
-/*
-    @ResponseBody
-    @RequestMapping(value = "/register",method = RequestMethod.POST)
-    public Response regist(User user){
-        try {
-            User registUser = userRepository.findByEmail(user.getEmail());
-            if (null != registUser) {
-                return result(ExceptionMsg.EmailUsed);
-            }
-            User userNameUser = userRepository.findByName(user.getName());
-            if (null != userNameUser) {
-                return result(ExceptionMsg.UserNameUsed);
-            }
-            User userMobile=userRepository.findByMobile(user.getMobile());
-            if(null !=userMobile){
-                return result(ExceptionMsg.MobileUsed);
-            }
-
-            // String encodePassword = MD5Util.encode(password);
-
-            user.setPassword(MD5Util.encode(user.getPassword()));
-            user.setCreateTime(DateUtils.getCurrentTime());
-            user.setLastModifyTime(DateUtils.getCurrentTime());
-            user.setProfilePicture("img/favicon.png");
-            List<UserRole> roles = new ArrayList<>();
-            UserRole role1 = userRoleRepository.findByRolename("ROLE_USER");
-            roles.add(role1);
-            user.setRoles(roles);
-            userRepository.save(user);
-            // 添加默认收藏夹
-			*//*Favorites favorites = favoritesService.saveFavorites(user.getId(), "未读列表");
-			// 添加默认属性设置
-			configService.saveConfig(user.getId(),String.valueOf(favorites.getId()));	*//*
-
-        } catch (Exception e) {
-
-            //logger.error("create user failed, ", e);
-            return result(ExceptionMsg.FAILED);
-        }
-        return result();
-    }*/
 
     @GetMapping("/user")
 
@@ -353,32 +238,11 @@ private UserRepository userRepository;
 
         Page<User> page = userRepository.findAll(pageable);
 
-// System.out.println(page.getNumber());
-// System.out.println(page.getNumberOfElements());
-// System.out.println(page.getSize());
-// System.out.println(page.getTotalElements());
-// System.out.println(page.getTotalPages());
-// System.out.println(page.isFirst());
-// System.out.println(page.isLast());
+
         ModelAndView mav = new ModelAndView("user/userlist");
         mav.addObject("page", page);
         return mav;
     }
 
-/*    @GetMapping("/member")
 
-    public ModelAndView memberlist(@RequestParam(value = "start", defaultValue = "0") Integer start,
-                                 @RequestParam(value = "limit", defaultValue = "5") Integer limit) {
-        start = start < 0 ? 0 : start;
-// Sort sort = new Sort(Sort.DEFAULT_DIRECTION, "categoryid","desc");
-//        Sort sort = new Sort(Sort.Direction.DESC, "categoryid");
-// Pageable pageable = new PageRequest(start, limit, sort);
-        Pageable pageable = new PageRequest(start, limit, SortTools.basicSort("desc", "id"));
-
-        Page<User> page = userRepository.findAll(pageable);
-
-        ModelAndView mav = new ModelAndView("admin/memberlist");
-        mav.addObject("page", page);
-        return mav;
-    }*/
 }
