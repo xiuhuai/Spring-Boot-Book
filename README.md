@@ -8,5 +8,5 @@
 
   作品地址：https://gitee.com/freen/fadmin
 
-
+由于收到大量垃圾Issue，所以暂时关闭Issue功能，有问题请入群提交，本项目不会关闭。
 
